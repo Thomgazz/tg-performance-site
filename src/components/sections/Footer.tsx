@@ -21,10 +21,10 @@ export function Footer() {
             07 85 52 77 84
           </a>
           <a
-            href="mailto:contact@tg-performance.fr"
+            href="mailto:thomasgazon9@gmail.com"
             className="text-xs font-medium text-anthracite-soft hover:text-ink"
           >
-            contact@tg-performance.fr
+            thomasgazon9@gmail.com
           </a>
           <a
             href="https://www.instagram.com/thomgazz/"

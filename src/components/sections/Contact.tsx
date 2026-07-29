@@ -162,7 +162,7 @@ export function Contact() {
             {status === "error" && (
               <p className="text-center text-sm text-anthracite-soft">
                 Une erreur est survenue. Vous pouvez aussi écrire directement
-                à contact@tg-performance.fr.
+                à thomasgazon9@gmail.com.
               </p>
             )}
           </form>
