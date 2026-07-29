@@ -1,12 +1,22 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
 
 const experience = [
-  "Préparation physique en Ligue 2 féminine de basketball",
-  "Accompagnement d'un groupe U18 France basketball",
-  "Expérience dans le rugby féminin haut niveau",
-  "Plusieurs années comme éducateur football auprès de jeunes joueurs",
+  {
+    sport: "Basket-ball",
+    items: [
+      "Préparateur physique en Ligue 2 Féminine — demi-finaliste des Playoffs",
+      "Préparateur physique d'un groupe U18 France Féminine",
+    ],
+  },
+  {
+    sport: "Rugby",
+    items: [
+      "Préparateur physique au Pôle Espoir de Rennes — Stade Rennais Rugby U18 Elite, vice-championnes de France",
+      "Préparateur physique du Stade Rennais Rugby — équipe Séniores Féminines Elite 1",
+    ],
+  },
 ];
 
 export function About() {
@@ -14,10 +24,15 @@ export function About() {
     <section id="a-propos" className="py-16 md:py-24">
       <Container className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
         <Reveal>
-          <PhotoPlaceholder
-            label="Photo — accompagnement sportif"
-            className="aspect-[4/3] w-full"
-          />
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line">
+            <Image
+              src="/images/about-accompagnement.jpg"
+              alt="Accompagnement d'une joueuse en match"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
 
         <Reveal delay={100}>
@@ -25,27 +40,38 @@ export function About() {
             Qui suis-je
           </span>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-            Une méthode construite sur le terrain
+            Une expertise construite entre terrain et science
           </h2>
           <p className="mt-5 text-base leading-relaxed text-anthracite-soft">
-            Je suis préparateur physique. Mon approche est construite par
-            l&apos;expérience terrain : accompagner des sportifs, analyser
-            leurs besoins et construire des solutions adaptées.
+            Je suis préparateur physique. Mon expertise s&apos;est construite
+            au contact direct des sportifs — en analysant leurs besoins et en
+            adaptant chaque solution à leur réalité.
           </p>
 
-          <ul className="mt-6 space-y-3">
-            {experience.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-ink">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                {item}
-              </li>
+          <div className="mt-6 space-y-5">
+            {experience.map((group) => (
+              <div key={group.sport}>
+                <p className="text-xs font-semibold tracking-wide text-ink">
+                  {group.sport}
+                </p>
+                <ul className="mt-2 space-y-2">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-ink"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
 
-          <p className="mt-6 text-base leading-relaxed text-anthracite-soft">
-            Cette même rigueur, je la mets aujourd&apos;hui au service de
-            toute personne qui veut retrouver un corps fort et durable — pas
-            seulement des sportifs de haut niveau.
+          <p className="mt-5 text-sm text-anthracite-soft">
+            Football — plusieurs années comme éducateur auprès de jeunes
+            joueurs.
           </p>
         </Reveal>
       </Container>

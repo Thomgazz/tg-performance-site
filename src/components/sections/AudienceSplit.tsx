@@ -12,12 +12,14 @@ export function AudienceSplit() {
                 Performance sportive
               </span>
               <h2 className="mt-3 text-2xl font-semibold leading-tight md:text-[26px]">
-                J&apos;accompagne les sportifs à développer leurs qualités
-                physiques pour être plus performants et plus résistants.
+                J&apos;accompagne les sportifs et les clubs dans le
+                développement de leurs qualités physiques grâce à une
+                préparation structurée.
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-white/70">
-                Clubs, athlètes compétiteurs, jeunes sportifs ambitieux :
-                programmation, tests physiques et prévention des blessures.
+                Sportifs professionnels, amateurs, jeunes sportifs ambitieux
+                ou clubs : tests physiques, programmation, développement des
+                capacités et prévention des blessures.
               </p>
               <a
                 href="#offres"
@@ -35,14 +37,14 @@ export function AudienceSplit() {
                 Santé &amp; transformation physique
               </span>
               <h2 className="mt-3 text-xl font-semibold leading-tight text-ink">
-                J&apos;aide les personnes actives à retrouver un corps fort et
-                performant, avec une méthode progressive adaptée à leur
-                quotidien.
+                J&apos;accompagne toute personne qui souhaite reprendre une
+                activité physique, retrouver de l&apos;énergie ou transformer
+                durablement son corps.
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-anthracite-soft">
-                La même rigueur de terrain et la même méthode scientifique,
-                mises au service de toute personne qui veut progresser — pas
-                seulement des sportifs de haut niveau.
+                Perte de poids, prise de muscle, retour à l&apos;activité,
+                mobilité : chaque parcours part d&apos;une analyse de votre
+                situation et avance à votre rythme.
               </p>
               <a
                 href="#offres"

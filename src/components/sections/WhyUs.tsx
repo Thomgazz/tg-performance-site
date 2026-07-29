@@ -3,23 +3,24 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const points = [
   {
-    title: "Expérience du haut niveau",
+    title: "Une expertise issue du sport de haut niveau",
     description:
-      "Une méthode construite dans des environnements sportifs exigeants.",
+      "Une expérience acquise auprès de sportifs évoluant dans des environnements exigeants.",
   },
   {
-    title: "Approche individualisée",
+    title: "Un accompagnement personnalisé",
     description:
-      "Chaque programme est adapté au profil, aux objectifs et aux contraintes — que vous soyez sportif de compétition ou simplement décidé à progresser.",
+      "Chaque programme est construit selon le profil, les objectifs et les contraintes de la personne.",
   },
   {
-    title: "Méthode scientifique",
+    title: "Une approche basée sur l'analyse",
     description:
-      "Des décisions basées sur l'analyse, les données et la progression.",
+      "Les choix d'entraînement reposent sur les connaissances scientifiques, l'observation et l'adaptation.",
   },
   {
-    title: "Vision long terme",
-    description: "Construire un corps performant et durable.",
+    title: "Une vision durable",
+    description:
+      "L'objectif est de construire des capacités physiques qui améliorent durablement la performance et la santé.",
   },
 ];
 
