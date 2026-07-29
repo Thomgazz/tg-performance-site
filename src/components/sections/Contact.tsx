@@ -52,7 +52,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="border-t border-line bg-surface py-16 md:py-24">
+    <section id="contact" className="border-t border-line bg-surface py-12 md:py-16">
       <Container className="max-w-2xl">
         <Reveal className="text-center">
           <span className="text-sm font-medium tracking-wide text-accent">
@@ -62,7 +62,7 @@ export function Contact() {
             Construisons ensemble votre prochaine progression
           </h2>
           <p className="mt-4 text-base leading-relaxed text-anthracite-soft">
-            Décrivez votre objectif, je reviens vers vous rapidement pour
+            Décrivez votre situation, je reviens vers vous rapidement pour
             échanger sur votre accompagnement.
           </p>
         </Reveal>

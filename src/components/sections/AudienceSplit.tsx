@@ -1,26 +1,40 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
+import { Tag } from "@/components/ui/Tag";
+
+const performanceTags = ["Professionnels", "Amateurs", "Jeunes en formation", "Clubs"];
+
+const santeTags = [
+  "Reprise d'activité",
+  "Perte de poids",
+  "Prise de muscle",
+  "Mobilité",
+  "Énergie",
+  "Douleurs liées à la sédentarité",
+];
 
 export function AudienceSplit() {
   return (
-    <section className="py-16 md:py-20">
+    <section className="py-10 md:py-14">
       <Container>
         <div className="grid gap-5 md:grid-cols-12">
           <Reveal className="md:col-span-7">
-            <div className="h-full rounded-2xl border border-line bg-ink p-8 text-white md:p-10">
+            <div className="h-full rounded-2xl border border-line bg-ink p-7 text-white md:p-8">
               <span className="text-xs font-medium tracking-wide text-white/60">
                 Performance sportive
               </span>
-              <h2 className="mt-3 text-2xl font-semibold leading-tight md:text-[26px]">
-                J&apos;accompagne les sportifs et les clubs dans le
-                développement de leurs qualités physiques grâce à une
-                préparation structurée.
+              <h2 className="mt-3 text-xl font-semibold leading-tight md:text-[22px]">
+                Développer les qualités physiques nécessaires à la
+                performance, prévenir les blessures et accompagner la
+                réathlétisation.
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-white/70">
-                Sportifs professionnels, amateurs, jeunes sportifs ambitieux
-                ou clubs : tests physiques, programmation, développement des
-                capacités et prévention des blessures.
-              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {performanceTags.map((tag) => (
+                  <Tag key={tag} tone="onDark">
+                    {tag}
+                  </Tag>
+                ))}
+              </div>
               <a
                 href="#offres"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white"
@@ -32,20 +46,19 @@ export function AudienceSplit() {
           </Reveal>
 
           <Reveal delay={100} className="md:col-span-5">
-            <div className="h-full rounded-2xl border border-line bg-surface p-8 md:p-10">
+            <div className="h-full rounded-2xl border border-line bg-surface p-7 md:p-8">
               <span className="text-xs font-medium tracking-wide text-accent">
                 Santé &amp; transformation physique
               </span>
-              <h2 className="mt-3 text-xl font-semibold leading-tight text-ink">
-                J&apos;accompagne toute personne qui souhaite reprendre une
-                activité physique, retrouver de l&apos;énergie ou transformer
-                durablement son corps.
+              <h2 className="mt-3 text-lg font-semibold leading-tight text-ink">
+                Retrouver une meilleure condition physique, à son rythme,
+                quel que soit le point de départ.
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-anthracite-soft">
-                Perte de poids, prise de muscle, retour à l&apos;activité,
-                mobilité : chaque parcours part d&apos;une analyse de votre
-                situation et avance à votre rythme.
-              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {santeTags.map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </div>
               <a
                 href="#offres"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink"

@@ -10,7 +10,7 @@ const points = [
   {
     title: "Un accompagnement personnalisé",
     description:
-      "Chaque programme est construit selon le profil, les objectifs et les contraintes de la personne.",
+      "Chaque programme est construit selon le profil et la situation de la personne.",
   },
   {
     title: "Une approche basée sur l'analyse",
@@ -20,24 +20,21 @@ const points = [
   {
     title: "Une vision durable",
     description:
-      "L'objectif est de construire des capacités physiques qui améliorent durablement la performance et la santé.",
+      "Construire des capacités physiques qui améliorent durablement la performance et la santé.",
   },
 ];
 
 export function WhyUs() {
   return (
-    <section className="border-t border-line bg-surface py-16 md:py-24">
+    <section className="border-t border-line bg-surface py-12 md:py-16">
       <Container>
-        <Reveal className="max-w-2xl">
-          <span className="text-sm font-medium tracking-wide text-accent">
+        <Reveal>
+          <h2 className="text-3xl font-semibold tracking-tight text-ink">
             Pourquoi TG Performance
-          </span>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-            Une différence qui se sent dès la première séance
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-2">
+        <div className="mt-10 grid gap-x-8 gap-y-8 md:grid-cols-2">
           {points.map((point, i) => (
             <Reveal key={point.title} delay={i * 80} className="flex gap-4">
               <span className="mt-1 text-sm font-semibold text-accent">

@@ -2,6 +2,7 @@ import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { AudienceSplit } from "@/components/sections/AudienceSplit";
 import { About } from "@/components/sections/About";
+import { ApproachBridge } from "@/components/sections/ApproachBridge";
 import { Offers } from "@/components/sections/Offers";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Contact } from "@/components/sections/Contact";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <AudienceSplit />
         <About />
+        <ApproachBridge />
         <Offers />
         <WhyUs />
         <Contact />

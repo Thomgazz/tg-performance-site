@@ -4,63 +4,64 @@ import { Button } from "@/components/ui/Button";
 
 const offers = [
   {
-    tag: "Offre découverte",
+    tag: "Le point de départ",
     title: "Bilan Performance & Santé",
-    description: "Définir une stratégie adaptée à votre profil.",
+    description: "Un état des lieux complet avant toute chose.",
     items: [
-      "Questionnaire initial",
+      "Échange initial",
+      "Questionnaire",
       "Tests physiques",
-      "Analyse du profil",
-      "Recommandations personnalisées",
+      "Analyse",
+      "Plan d'action personnalisé",
+    ],
+    highlight: false,
+  },
+  {
+    tag: "À domicile",
+    title: "Coaching individuel à domicile",
+    description: "Un accompagnement en direct, chez vous.",
+    items: [
+      "Déplacement dans un rayon de 45 km",
+      "Séance individuelle",
+      "Matériel fourni",
+      "Corrections techniques",
+      "Crédit d'impôt de 50 %",
     ],
     highlight: false,
   },
   {
     tag: "Offre principale",
     title: "Coaching hybride",
-    description: "Un accompagnement complet, personnalisé et continu.",
+    description: "Un suivi personnalisé, entre les séances.",
     items: [
       "Bilan initial",
       "Programme personnalisé",
-      "Application de suivi",
-      "Suivi WhatsApp",
+      "Suivi hebdomadaire",
       "Ajustements réguliers",
+      "Échanges à distance",
     ],
     highlight: true,
-  },
-  {
-    tag: "Clubs & athlètes",
-    title: "Préparation physique sportive",
-    description: "Pour les clubs et les athlètes en recherche de performance.",
-    items: [
-      "Tests physiques",
-      "Programmation",
-      "Séances terrain",
-      "Suivi de la performance",
-      "Prévention des blessures",
-    ],
-    highlight: false,
   },
 ];
 
 export function Offers() {
   return (
-    <section id="offres" className="py-16 md:py-24">
+    <section id="offres" className="py-12 md:py-16">
       <Container>
         <Reveal className="max-w-2xl">
           <span className="text-sm font-medium tracking-wide text-accent">
             Les accompagnements
           </span>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink">
-            Un accompagnement pour chaque objectif
+            Trois formats, une même exigence
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {offers.map((offer, i) => (
             <Reveal key={offer.title} delay={i * 100} className="h-full">
               <div
-                className={`flex h-full flex-col rounded-2xl p-8 ${
+                className={`flex h-full flex-col rounded-2xl p-7 ${
                   offer.highlight
                     ? "bg-ink text-white"
                     : "border border-line bg-background text-ink"
@@ -93,11 +94,7 @@ export function Offers() {
                         offer.highlight ? "text-white/90" : "text-ink"
                       }`}
                     >
-                      <span
-                        className={`mt-2 h-1 w-1 shrink-0 rounded-full ${
-                          offer.highlight ? "bg-accent" : "bg-accent"
-                        }`}
-                      />
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
                       {item}
                     </li>
                   ))}
