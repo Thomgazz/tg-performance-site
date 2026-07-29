@@ -32,6 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# photos brutes non triées (pas destinées au dépôt)
+/photos-a-trier
 
 # vercel
 .vercel

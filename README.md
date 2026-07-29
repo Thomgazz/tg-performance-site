@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TG Performance — site vitrine
 
-## Getting Started
+Site vitrine pour TG Performance, préparation physique & coaching personnalisé.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- Web3Forms pour le formulaire de contact (gratuit)
+
+## Développement
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Formulaire de contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Le formulaire utilise [Web3Forms](https://web3forms.com) (gratuit, sans backend à héberger).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Créer un compte gratuit sur web3forms.com avec votre email
+2. Récupérer la clé d'accès fournie
+3. Copier `.env.example` vers `.env.local` et coller la clé :
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_WEB3FORMS_KEY=votre_clé
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Déploiement (gratuit)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Pousser le projet sur un dépôt GitHub
+2. Importer le dépôt sur [vercel.com](https://vercel.com) (plan Hobby gratuit)
+3. Ajouter la variable d'environnement `NEXT_PUBLIC_WEB3FORMS_KEY` dans les réglages du projet Vercel
+4. Déployer — le site est disponible sur `<nom-du-projet>.vercel.app`
 
-## Deploy on Vercel
+Un nom de domaine personnalisé (ex. `tgperformance.fr`) peut être ajouté plus tard depuis les réglages Vercel, une fois acheté chez un registrar (~10-15€/an).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Photos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les blocs "Photo — ..." sont des emplacements réservés (`PhotoPlaceholder`). Pour les remplacer par de vraies photos, déposer les images dans `public/` et remplacer le composant `PhotoPlaceholder` par un composant `next/image` dans les fichiers concernés (`src/components/sections/Hero.tsx`, `About.tsx`).
