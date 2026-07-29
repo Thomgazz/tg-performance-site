@@ -8,9 +8,10 @@ type Status = "idle" | "loading" | "success" | "error";
 
 const objectives = [
   "Performance sportive",
-  "Remise en forme",
-  "Coaching individuel",
-  "Club sportif",
+  "Santé",
+  "Transformation physique",
+  "Réathlétisation",
+  "Clubs",
 ];
 
 export function Contact() {
