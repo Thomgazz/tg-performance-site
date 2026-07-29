@@ -15,6 +15,12 @@ export function Footer() {
 
         <div className="flex items-center gap-5">
           <a
+            href="tel:+33785527784"
+            className="text-xs font-medium text-anthracite-soft hover:text-ink"
+          >
+            07 85 52 77 84
+          </a>
+          <a
             href="mailto:contact@tg-performance.fr"
             className="text-xs font-medium text-anthracite-soft hover:text-ink"
           >

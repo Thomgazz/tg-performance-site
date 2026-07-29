@@ -66,6 +66,15 @@ export function Contact() {
             Décrivez votre situation, je reviens vers vous rapidement pour
             échanger sur votre accompagnement.
           </p>
+          <p className="mt-3 text-sm text-anthracite-soft">
+            Vous préférez appeler ?{" "}
+            <a
+              href="tel:+33785527784"
+              className="font-medium text-ink hover:text-accent"
+            >
+              07 85 52 77 84
+            </a>
+          </p>
         </Reveal>
 
         <Reveal delay={100}>
